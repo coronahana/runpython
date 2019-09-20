@@ -1,0 +1,8 @@
+:For prijectid  IN  ${projectlist}
+    \    ${res}    删除一个工程    ${projectid}
+    \    对比值    ${res}    success    True    bool
+    \    deleteprojectfromfile    prijectid
+    
+    curl 'http://dev.tesla.oa.com/teslaml/api/flow/getFlowSnapshot.json' -H  --data 'flowId=5224&jobFlowId=' --compressed
+    
+    curl 'http://dev.tesla.oa.com/teslaml/api/flow/stopFlow.do' -H ' --data 'flowId=5224' --compressed
