@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import time
 import random
+@
 def time_YmdHMS():
     #2019-09-23 18:34:48
     print(time.time())
