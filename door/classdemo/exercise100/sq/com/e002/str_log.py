@@ -44,25 +44,24 @@ f20180111150230/j_xMSUEejY.json	158	FjJr_4deMqFphGaptm-2Pa6wwRP2	151565417719892
 f20180111151741/i_JuSWztB3.jpg	92506	FrIjRevHSi6xv4-NQa2wrHu5a1zQ	15156550875370965	image/jpeg	0
 f20180111153550/i_9wWzVenl.gif	769872	FvslKY9JUaCQm-lu02E34tvAP_oG	15156561674621628	image/gif	0
 '''
-f_types=[]
+f_types=[] #存储所有的类型
 f_total_size=[]
-resultList=[]
+resultList=[]#获取每条数据中的文件类型和大小
 lines = logstr.split("\n")
-print(lines)
+# print(lines)
 del lines[0]
 del lines[-1]
-print(lines)
-for line in lines :
+# print(lines)
+for line in lines : #拿到每行数据
     temp = line.split("\t")
-    f_type=(temp[0].split("."))[-1]
-    f_size = temp[1]
-    print(f_type,f_size)
+    f_type=(temp[0].split("."))[-1] #获取到文件类型
+    f_size = temp[1] #获取到文件大小
+    # print(f_type,f_size)
     if f_type not in f_types:
         f_types.append(f_type)
     resultList.append([f_type,f_size])
-
-print(f_types)
-print(resultList)
+# print(f_types)
+# print(resultList)
 """
 ['jpeg', 'json', 'png', 'jpg', 'gif']
 [['jpeg', '169472'], ['json', '1036'], ['json', '159'], ['png', '92278'], ['json', '159'], ['png', '139230'], ['json', '159'], ['png', '120044'], ['json', '158'], ['jpg', '92506'], ['gif', '769872']]
@@ -72,15 +71,14 @@ re_list=[]
 for typeone  in f_types :
     total_type = 0
     for resone in resultList:
-
         if resone[0]==typeone:
             total_type+=int(resone[1])
     re_list.append([typeone,total_type])
-
-
 print(re_list)
 #[['jpeg', 412560], ['json', 8927], ['jpg', 1374206], ['png', 1031703], ['gif', 769872]]
 
+for one in re_list:
+    print(one[0]+"\t"+str(one[1]))#打印类型和大小
 
 
 """
