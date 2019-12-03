@@ -9,7 +9,7 @@ def putInfoToDict(fileName):
     line_list = student_data.readlines()
     #print(line_list)
     for linedata in line_list:
-        line=linedata.replace(";"," ").replace("("," ").replace(")"," ").replace("\t","").replace("\n","").replace("'","").strip().split(",")
+        line=linedata.replace(";"," ").replace("(", " ").replace(")"," ").replace("\t","").replace("\n","").replace("'","").strip().split(",")
         # print(line)
         checkintime=line[0]#签到时间
         lessonid=line[1]#签到课程的id号
