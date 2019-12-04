@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 import time
 import random
-@
+
 def time_YmdHMS():
     #2019-09-23 18:34:48
     print(time.time())
@@ -20,5 +20,5 @@ def Get_A_Timesign():
     print(current_milli_time)
     return  current_milli_time
 
-#Get_A_Timesign()
+Get_A_Timesign()
 #time_YmdHMS()
