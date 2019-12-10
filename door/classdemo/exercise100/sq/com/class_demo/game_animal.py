@@ -100,7 +100,7 @@ def game_demo(game_Maxtime):
             feedfood = input("输入meate或者grass！请输入 ")
             res=(an.feed(feedfood))
             if(res=="success"):
-                print("编号"+str((romList[room_num]).num)+"的"+an.nickName+"成功吃到"+an.food)
+                print("编号"+str((roomList[room_num]).num)+"的"+an.nickName+"成功吃到"+an.food)
                 if rem.keys().__contains__(str((roomList[room_num]).num)):
                     rem.pop(str((roomList[room_num]).num))#喂过的去掉强提示
                 pass
