@@ -122,7 +122,7 @@ def game_demo(game_Maxtime):
                     if an.callNum >=an.eatMaxNum:
                         pass
                     else:
-                        # 添加羊还能喂的强提示
+                        # 添加羊还能喂#print(romList)的强提示
                         rem[str ((roomList[room_num]).num)] = "羊"
             else:
                 print (an.nickName + "叫够次数了,不叫了")
@@ -137,3 +137,5 @@ roomList= game_demo(40)
 for roomone in roomList:
     print (str (roomone.num), roomone.anima.nickName, roomone.anima.weight)
 #print(romList)
+
+
