@@ -24,6 +24,7 @@ def selenium_demo01():
         temlist= (dldata.find_element_by_tag_name("dd").text).replace("℃","").strip().split("/")
         lowTem = temlist[0]#低温
         highTem=temlist[-1] #高温
+
         lowdic[cityName]=lowTem
         lowlist.append(int(lowTem))
         pass

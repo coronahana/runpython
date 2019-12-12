@@ -64,7 +64,6 @@ class Room:
         self.num = ininum
         self.anima = inianima
 
-
 def game_demo(game_Maxtime):
     # 记忆房间动物
     rem={"可喂食房间和动物":""}
