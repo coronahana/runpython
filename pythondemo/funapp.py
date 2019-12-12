@@ -11,7 +11,7 @@ def f1():#省
     f2()
     print('in f1 - end')
 
-f1()#广东
+f1()#广东省
 """
 Traceback (most recent call last):
   File "E:/PycharmProjects/runpython/pythondemo/funapp.py", line 16, in <module>
