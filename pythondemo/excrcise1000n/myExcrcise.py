@@ -358,7 +358,7 @@ alphabet_index("We have a lot of rain in June.")
             newList.remove(0)
     newStr=" ".join(newList)
     return newStr
-def hh():
+def keys_and_values(oneDict):
     """
      写一个函数keys_and_values，该函数参数是1个字典，
 要求该函数返回一个列表，里面包含了2个元素也是列表，分别是 字典里面的key 和对应的 value
@@ -372,8 +372,54 @@ keys_and_values({ "key1": True, "key2": False, "key3": True })
 
     :return:
     """
+    keysList=[]
+    valuesList=[]
+    for i in oneDict:
+        keysList.append(i)
+        valuesList.append(oneDict.get(i))
+    return keysList , valuesList
+def insertNum(oneList,insertNum):
+    """
+    自己写一个已经排好序的列表。现输入一个数，要求按原来的规律将它插入列表中。
+程序分析：首先判断此数是否大于最后一个数，然后再考虑插入中间的数的情况，插入后此元素之后的数，依次后移一个位置。
+    :return:
+    """
+    if insertNum < oneList[0]:
+        oneList.insert(0, insertNum)
+        return oneList
+    if insertNum >= oneList[-1]:
+        oneList.insert (oneList.__len__(), insertNum)
+        return oneList
+    for i in range(oneList.__len__()-1):
+        print(f'oneList[i]={oneList[i]} insertNum={insertNum} oneList[i+1]={oneList[i+1]}')
+        if oneList[i+1]>insertNum>=oneList[i]:
+            oneList.insert(i,insertNum)
+            return oneList
+aa=9
+def neizhitype():
+    """
+    python内建数据类型有哪些
+显示/隐藏答案
+    :return:
+   整型--int   布尔型--bool   字符串--str  列表--list  元组--tuple  字典--dict
 
-    if __name__ == '__main__':
+    """
+    global aa
+    aa=78
+
+def p():
+    """
+    自己写一个已经排好序的列表。现输入一个数，要求按原来的规律将它插入列表中。
+程序分析：首先判断此数是否大于最后一个数，然后再考虑插入中间的数的情况，插入后此元素之后的数，依次后移一个位置。
+
+    :return: 
+    """
+     
+
+
+if __name__ == '__main__':
+    print(insertNum([1,3,5,6],6))
+    print(keys_and_values({ "a": 1, "b": 2, "c": 3 }))
     print(alphabet_index('AlphAbet_"'))
     # print (myReplace ("microscopic","i-i"))
     # print(concat2([10, 11, 12, 9, 10],[6, 7, 8, 9, 10],[10, 11, 12]))
