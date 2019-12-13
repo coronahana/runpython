@@ -21,7 +21,7 @@ def datas(splitstr,datatotal ):
 
 def makedata(splitstr,datatotal,filename):
     #打开文件
-    #filename ="test.txt"
+
     fo = open (filename, "w", encoding="UTF-8")
     print ("文件名为: ", fo.name)
 
