@@ -119,14 +119,11 @@ class Demo:
 
     def demoList(self):
         # List（列表苦力）
-
         list = ['runoob01', 78602, 2.2303, 'john04', 70.205]
-
-        print (list)  # 输出完整列表
-        print (list[0])  # 输出列表的第一个元素
-
+        print(list)  # 输出完整列表
+        print(list[0])  # 输出列表的第一个元素
         for lll in list:
-            print (lll)  # 输出列表的每一个个元素
+            print(lll)  # 输出列表的每一个个元素
 
     def demoTuple(self):
         # Tuple（元组-不能修改）Python的元组与列表类似，不同之处在于元组的元素不能修改。
@@ -183,7 +180,7 @@ class Demo:
         res01 = json.dumps (dic01)
         print (res01)
         """
-        POST /teslaml/api/flow/saveFlow.do
+    
         {
             "success": True,
             "data": {
