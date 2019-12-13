@@ -414,7 +414,160 @@ def p():
 
     :return: 
     """
-     
+def p25():
+    """
+    列出5个python标准库
+    os：提供了不少与操作系统相关联的函数
+    sys:   通常用于命令行参数
+    re:   正则匹配
+    math: 数学运算
+    datetime:处理日期时间
+    """
+    pass
+def p26(): pass
+"""
+fun(*args,**kwargs)中的*args,**kwargs什么意思？
+显示/隐藏答案
+答：  *args, 可变数量参数--会自动封装成元组
+    **kwargs 关键字可变数量参数---会自动封装成字典、
+"""
+def p27(): pass
+"""
+ 一句话解释什么样的语言能够用装饰器?
+显示/隐藏答案
+答：  函数可以作为参数传递的语言，可以使用装饰器
+"""
+import  random
+# import np
+def p28():
+    """
+    随机整数：random.randint (a, b), 生成区间内的整数
+    随机小数：习惯用numpy库，利用np.random.randn (5)
+    生成5个随机小数
+    0 - 1
+    随机小数：random.random (), 括号中不传参
+    :return:
+    """
+    print(random.randint(1,10))
+    print (random.random ())
+    # print (np.random.randn (5))
+    pass
+
+def p29():
+    """
+    class Person:
+name="aaa"
+p1=Person()
+p2=Person()
+    :return:
+    """
+    pass
+def p30():
+    pass
+
+def p31(): pass
+def p32(): pass
+def p33(): pass
+def p34(): pass
+def p35(): pass
+def p36():
+    """
+    写函数，计算传入字符串+0-0skahe817jashf wet1中【数字】、【字母】、【空格】 以及 【其他】的个数，并返回结果。
+显示/隐藏答案
+答：  def func(s):
+dic = {'num':0,'alpha':0,'space':0,'other':0}
+    for i in s:
+       if i.isdigit():
+             dic['num']+=1
+        elif i.isalpha():
+            dic['alpha'] += 1
+         elif i.isspace():
+             dic['space'] += 1
+        else:
+             dic['other'] += 1
+     return dic
+ print(func('+0-0skahe817jashf wet1'))
+    :return:
+    """
+    pass
+def p37(): pass
+def p38(): pass
+def p39():
+    """
+    判断下面的诗词是否是回文。
+苏轼的《菩萨蛮》题为《闲情》，其中一句：
+“迟日恨依依，依依恨日迟”
+显示/隐藏答案
+答：  s = "迟日恨依依，依依恨日迟"
+s1 = s[::-1]
+if s == s1:
+    print("是回文")
+else:
+    print("不是回文")
+    :return:
+    """
+    oneStr="迟日恨依依，依依恨日迟"
+    newStr=[i for i in oneStr]
+    newStr02=[i for i in oneStr]
+    if newStr ==newStr02:
+        return True
+    else:
+        return False
+
+print(p39())
+def p40(): pass
+def p41(): pass
+def p42(): pass
+def p43(): pass
+def p44(): pass
+def p45(): pass
+def p46(): pass
+def p47(): pass
+def p48(): pass
+def p49(): pass
+def p50(): pass
+def p51(): pass
+def p52(): pass
+def p53(): pass
+def p54(): pass
+def p55(): pass
+def p56(): pass
+def p57(): pass
+def p58(): pass
+def p59(): pass
+def p60(): pass
+def p61(): pass
+def p62(): pass
+def p63(): pass
+def p64(): pass
+def p65(): pass
+def p66(): pass
+def p67(): pass
+def p68(): pass
+def p69(): pass
+def p70(): pass
+def p71(): pass
+def p72(): pass
+def p73(): pass
+def p74(): pass
+def p75(): pass
+def p76(): pass
+def p77(): pass
+def p78(): pass
+def p79(): pass
+def p80(): pass
+def p81(): pass
+def p82(): pass
+def p83(): pass
+def p84(): pass
+def p85(): pass
+def p86(): pass
+def p87(): pass
+def p88(): pass
+def p89(): pass
+def p90(): pass
+
+
 
 
 if __name__ == '__main__':
