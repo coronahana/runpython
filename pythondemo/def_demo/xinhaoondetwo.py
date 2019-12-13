@@ -12,7 +12,6 @@ def myfun02(**args) :#相当于 def myfun({a:1,b:2,c:3}) ==>args 就相当于{a:
     for k,v in args:
         print(k,":",v)
 
-
 myfun01(2,3,4)
 #kk={"gg":1,"bb":2,"cc":3}
 #myfun02(kk)

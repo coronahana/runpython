@@ -1,5 +1,8 @@
-from door.classdemo  import fatherc
 import re
+
+from pythondemo.class_demo import fatherc
+
+
 class  testd:
 
     def getdata(self):

@@ -36,9 +36,6 @@ mind:
 
     
 '''
-
-
-
 def format_file_data(file_r):
     file_r = open (file_r, "r")
     file_w = open ("file2.txt", "w+")
@@ -46,9 +43,9 @@ def format_file_data(file_r):
     # print (lines)
     for linedata in lines:
         # print(linedata)
-        linelist = linedata.replace ("\n", " ").strip ().split (";")
+        linelist = linedata.replace("\n", " ").strip().split(";")
         name_str = (linelist[0]).strip ().ljust (10)
-        salary_str = "\tsalary:\t" + str ((((linelist[-1]).split (":"))[-1])).rjust (10)
+        salary_str = "\tsalary:\t" + str ((((linelist[-1]).split(":"))[-1])).rjust (10)
         income = int ((((linelist[-1]).split (":"))[-1])) * 0.9
         tax = int (((linelist[-1]).split (":"))[-1]) * 0.1
         income_str = ";\tincome:\t" + str (int (income)).rjust (10)
