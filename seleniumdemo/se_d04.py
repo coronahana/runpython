@@ -42,6 +42,7 @@ def getNewJob():
     for job in jobs[1:]:
         print((job.text).replace("\n","|"))
 
+
 if __name__ == '__main__':
     getNewJob()
 """
