@@ -4,32 +4,38 @@ import time
 from selenium.webdriver.support.select import Select
 import time
 """
-符合要求数据如下：
+执行结果在文本(se_d05_results)内保存
 
 """
-def findPiao():
+def findTickets():
+    #setup
     driver = webdriver.Chrome()
     driver.get("https://kyfw.12306.cn/otn/leftTicket/init")
     driver.implicitly_wait(6)
+
     driver.find_element_by_id("fromStationText").clear()
+    driver.find_element_by_id ("fromStationText").click()
     driver.find_element_by_id("fromStationText").send_keys("南京南\n")
+
     driver.find_element_by_id("toStationText").clear()
+    driver.find_element_by_id ("toStationText").click()
     driver.find_element_by_id("toStationText").send_keys("杭州东\n")
+
     Select(driver.find_element_by_id("cc_start_time")).select_by_visible_text("06:00--12:00")
     driver.find_element_by_xpath("//*[@id='date_range']/ul/li[2]/span[1]").click()
-    print("加载搜索结果")
+    #加载搜索结果
     time.sleep(5)
-    els= driver.find_elements_by_xpath('//*[@id="queryLeftTable"]/tr/td[4]')
-    for one in els:
-        print("td")
-        print(one.text)
-
-
-
-
-    # driver.quit()
+    allticket = driver.find_elements_by_xpath('//*[@id="queryLeftTable"]/tr[contains(@id,"ticket_")]') #是否有票
+    for ticket in allticket:
+        ishave = ticket.find_element_by_xpath("./td[4]").text
+        # 判断二等座是否有票
+        if(ishave not in ["无","--","候补"]):
+            ticketName = ticket.find_element_by_xpath('./td[1]/div[1]/div[1]/div[1]/a[1]').text
+            print(ticketName)
+    #teardow
+    #driver.quit()
 if __name__ == '__main__':
-    findPiao()
+    findTickets()
 """
 Selenium 作业 5
 打开 12306 网站  https://kyfw.12306.cn/otn/leftTicket/init
