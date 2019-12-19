@@ -27,6 +27,8 @@ def checkHuawei(driver):
             print (f'菜单{onlineItem}中不包含 {item}')
     return wins
 
+
+
 def checkItem(driver,wins):
     #回到主窗口
     driver.switch_to.window (wins[0])
