@@ -12,6 +12,7 @@ def getNewJob():
     driver.find_element_by_css_selector("div.fltr.radius_5 > div > a.more").click()
     # 职能类别 选 计算机软件 -> 高级软件工程师
     # indtype_click
+
     driver.find_element_by_id ("funtype_click").click ()
     driver.find_element_by_id ("funtype_click_center_left_each_0100").click ()
     driver.find_element_by_id ("funtype_click_center_right_list_category_0100_0100").click ()
@@ -42,7 +43,7 @@ def getNewJob():
     for job in jobs[1:]:
         print((job.text).replace("\n","|"))
 
-
+    driver.quit()
 if __name__ == '__main__':
     getNewJob()
 """
