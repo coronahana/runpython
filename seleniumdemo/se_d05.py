@@ -32,10 +32,13 @@ def findTickets():
         if(ishave not in ["无","--","候补"]):
             ticketName = ticket.find_element_by_xpath('./td[1]/div[1]/div[1]/div[1]/a[1]').text
             print(ticketName)
+    print("前面执行完了")
     #teardow
     #driver.quit()
+
 if __name__ == '__main__':
     findTickets()
+    print("方法调用完成")
 """
 Selenium 作业 5
 打开 12306 网站  https://kyfw.12306.cn/otn/leftTicket/init
@@ -136,7 +139,5 @@ for one in theTrainLines:
     if secondlevelseat:
         print (one.find_element_by_css_selector('td:nth-of-type(1) a').text)
 driver.implicitly_wait(10)
-
-
 driver.quit()
 """
